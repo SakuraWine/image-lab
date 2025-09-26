@@ -1,0 +1,14 @@
+# 改行コードを LF に正規化
+* text=auto eol=lf
+
+# 画像等のバイナリはそのまま
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+
+# Rust ソースは明示的にテキスト扱い
+*.rs text
+Cargo.toml text
+Cargo.lock text

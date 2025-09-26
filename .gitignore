@@ -1,0 +1,51 @@
+# ---- Rust / Cargo ----
+# ビルド成果物
+/target/
+/image-core/target/
+/image-cli/target/
+**/*.rs.bk
+
+# プロファイル/カバレッジ
+*.profraw
+*.profdata
+/coverage/
+*.dSYM/
+*.pdb
+
+# (重要) Cargo.lock はコミットする
+# Rust ワークスペースに CLI（バイナリ）があるため、Cargo.lock は追跡推奨
+
+# ---- OS / エディタ ----
+.DS_Store
+Thumbs.db
+.idea/
+
+# VS Code: ほとんど非追跡。ただし推奨設定系は許可
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# ---- Dev Containers / Docker ----
+# .devcontainer/ は設定を共有したいので通常は追跡（= ignore しない）
+# もし一時ファイルを置く場合はここで個別に追加
+
+# ---- Node系(将来GUI等で使う可能性を見越して) ----
+node_modules/
+dist/
+build/
+
+# ---- ログ / 一時 ----
+*.log
+tmp/
+.temp/
+.cache/
+
+# ---- テスト用出力 ----
+/tests/output/
+/tests/tmp/
+
+# ---- 秘匿情報 ----
+.env
+.env.*

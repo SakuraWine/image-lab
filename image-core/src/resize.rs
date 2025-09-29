@@ -1,5 +1,6 @@
 use image::{RgbaImage, imageops::FilterType};
 
+/// 画像をリサイズする
 pub fn resize_lanczos3(img: &RgbaImage, width: u32, height: u32) -> RgbaImage {
     image::imageops::resize(img, width, height, FilterType::Lanczos3)
 }
